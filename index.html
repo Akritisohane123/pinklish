@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinklish by Akriti Sohane</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>💗 Pinklish</h1>
+    <p>by Akriti Sohane • Age 21</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#trending">Trending</a>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#cart">Cart</a>
+      <a href="#account">Account</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-banner">
+    <div class="overlay">
+      <h2>Welcome to Pinklish</h2>
+      <p>“Where every shade of pink has a story 💖”</p>
+      <a href="#collection" class="cta">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- Founder Note Section -->
+  <section class="section" style="background-color: #ffe6f0;">
+    <h2>A Thought from Akriti Sohane 💖</h2>
+    <p style="max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6;">
+      Being a girl who loves pink, I’ve always felt a deep connection to the softness, strength, and sparkle that this color brings.<br><br>
+      Pink isn’t just a color  it’s an emotion. It’s the comfort of feeling pretty, the power of being bold, and the joy of embracing your feminine side without holding back.<br><br>
+      I created <strong>Pinklish</strong> for every girlie out there who lights up when she sees blush, rose, peach, or magenta. This is for the ones who dream in pink, dress in pink, and live in pink.<br><br>
+      This app is dedicated to all my pretty ladies who carry confidence in curls, wear love like lipstick, and let their personality shine in every shade of pink. You inspire me  and Pinklish is my way of celebrating you.<br><br>
+      With all the love,<br>
+      <strong>Akriti Sohane</strong>
+    </p>
+  </section>
+
+  <!-- Collection Section -->
+  <section id="collection" class="section">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="https://i.imgur.com/91P2JMe.jpg" alt="Pink Top">
+        <h3>Pink Pop Top</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Magnetic Magenta</option>
+          <option>Blushy Rose</option>
+          <option>Peach Punch</option>
+          <option>Cherry Bloom</option>
+        </select>
+        <p class="quote">“Bold but soft — like you 💗”</p>
+        <button onclick="alert('Added to wishlist!')">Add to Wishlist</button>
+        <button onclick="alert('Added to cart!')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.imgur.com/VqRZEvX.jpg" alt="Pink Hoodie">
+        <h3>Cotton Candy Hoodie</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Frosty Flamingo</option>
+          <option>Peony Plush</option>
+          <option>Sugar Blush</option>
+          <option>Bubblegum Breeze</option>
+        </select>
+        <p class="quote">“Stay warm, stay pink ☁️”</p>
+        <button onclick="alert('Added to wishlist!')">Add to Wishlist</button>
+        <button onclick="alert('Added to cart!')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.imgur.com/czqzFqD.jpg" alt="Pink Dress">
+        <h3>Flamingo Dream Dress</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Dreamy Rose</option>
+          <option>Pastel Peach</option>
+          <option>Cotton Bloom</option>
+          <option>Cherry Blossom</option>
+        </select>
+        <p class="quote">“Dreamy, twirly & totally you ✨”</p>
+        <button onclick="alert('Added to wishlist!')">Add to Wishlist</button>
+        <button onclick="alert('Added to cart!')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trending Section -->
+  <section id="trending" class="section">
+    <h2>Trending Hot Picks 🔥</h2>
+    <p>“Celebrity-approved pink outfits 💫”</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://i.imgur.com/3YZ7u2s.jpg" alt="Celebrity Look">
+        <h3>Barbiecore Blazer</h3>
+        <p>Worn by Margot Robbie ✨</p>
+        <button onclick="alert('View Details')">View</button>
+      </div>
+      <div class="product-card">
+        <img src="https://i.imgur.com/jtBjJpC.jpg" alt="Celebrity Dress">
+        <h3>Peachy Glam Gown</h3>
+        <p>Worn by Selena Gomez 💖</p>
+        <button onclick="alert('View Details')">View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wishlist Section -->
+  <section id="wishlist" class="section">
+    <h2>Your Wishlist 💌</h2>
+    <p>Saved with love. (Functionality coming soon!)</p>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="section">
+    <h2>Your Cart 🛍️</h2>
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+  </section>
+
+  <!-- Account Section -->
+  <section id="account" class="section">
+    <h2>Your Account 👛</h2>
+    <form onsubmit="alert('Account details saved!'); return false;">
+      <input type="text" placeholder="Full Name" required><br>
+      <input type="tel" placeholder="Contact Number" required><br>
+      <input type="email" placeholder="Email Address" required><br>
+      <input type="text" placeholder="Local Address" required><br>
+      <select required>
+        <option value="">Preferred Size</option>
+        <option>28</option>
+        <option>30</option>
+        <option>32</option>
+        <option>34</option>
+        <option>36</option>
+      </select><br>
+      <button type="submit">Save Details</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Pinklish. Made with 💖 by Akriti Sohane</p>
+  </footer>
+
+</body>
+</html>

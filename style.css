@@ -1,0 +1,176 @@
+/* General Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fff0f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-banner {
+  background-image: url('https://i.imgur.com/qKHZ5sF.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.hero-banner .overlay {
+  background: rgba(255, 105, 180, 0.75);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.hero-banner h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.hero-banner .cta {
+  background-color: white;
+  color: #ff69b4;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-banner .cta:hover {
+  background-color: #ffe6f0;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffe6f0;
+  border-bottom: 2px dashed #ffc0cb;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+  padding: 1rem;
+  width: 260px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  color: #d63384;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.product-card p,
+.product-card label,
+.product-card select,
+.product-card .quote {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.product-card .quote {
+  color: #ff69b4;
+  font-style: italic;
+}
+
+/* Buttons */
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  margin: 5px 0;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff85c1;
+}
+
+/* Forms */
+form input,
+form select {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+/* Founder Note Styling */
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
