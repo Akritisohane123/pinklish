@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collection - Pinklish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">💗 Pinklish</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <!-- Collection Section -->
+  <section class="section">
+    <h2>✨ Our Pink Picks</h2>
+    <div class="horizontal-scroll">
+
+      <!-- Each Product Card (Repeat for all items) -->
+      <div class="product-card" data-id="1">
+        <img src="images/bunny_hoodie.png" alt="Bunny Hoodie">
+        <h3>Bunny Snuggle Hoodie</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Blushy Rose</option>
+          <option>Magnetic Magenta</option>
+          <option>Peach Punch</option>
+        </select>
+        <p class="quote">“Hop into cozy vibes 💞”</p>
+        <button onclick="addToWishlist(1)">Wishlist</button>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="2">
+        <img src="images/bottom_1.png" alt="Peachy Joggers">
+        <h3>Peachy Joggers</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Rosy Radiance</option>
+          <option>Bubblegum Bliss</option>
+          <option>Petal Pink</option>
+        </select>
+        <p class="quote">“Strut with softness 💃”</p>
+        <button onclick="addToWishlist(2)">Wishlist</button>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="3">
+        <img src="images/elegant_brunch_dress.png" alt="Elegant Dress">
+        <h3>Elegant Brunch Dress</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select>
+          <option>Cherry Bloom</option>
+          <option>Cotton Candy Pop</option>
+          <option>Rosé Dream</option>
+        </select>
+        <p class="quote">“Made for mimosas & memories 🍓”</p>
+        <button onclick="addToWishlist(3)">Wishlist</button>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+
+      <!-- NEW ITEMS START -->
+
+      <div class="product-card" data-id="4">
+        <img src="images/bottom_2.png" alt="Rose Joggers">
+        <h3>Rose Joggers</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Dusty Pink</option><option>Frosted Blush</option></select>
+        <p class="quote">“Glow in your flow 🌸”</p>
+        <button onclick="addToWishlist(4)">Wishlist</button>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="5">
+        <img src="images/bottom_3.png" alt="Candy Flare Pants">
+        <h3>Candy Flare Pants</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Candy Pink</option><option>Blush Matte</option></select>
+        <p class="quote">“Twirl in sweetness 🍬”</p>
+        <button onclick="addToWishlist(5)">Wishlist</button>
+        <button onclick="addToCart(5)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="6">
+        <img src="images/bow_hoodie.png" alt="Bow Hoodie">
+        <h3>Bow Hoodie</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Ribbon Pink</option><option>Soft Coral</option></select>
+        <p class="quote">“Wrapped in charm 🎀”</p>
+        <button onclick="addToWishlist(6)">Wishlist</button>
+        <button onclick="addToCart(6)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="7">
+        <img src="images/Kitty_Wink_Hoddie.png" alt="Kitty Wink Hoodie">
+        <h3>Kitty Wink Hoodie</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Bubble Blush</option><option>Whisker Rose</option></select>
+        <p class="quote">“Say meow in style 🐱”</p>
+        <button onclick="addToWishlist(7)">Wishlist</button>
+        <button onclick="addToCart(7)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="8">
+        <img src="images/cozy_winter_heart_jacket.png" alt="Heart Jacket">
+        <h3>Cozy Heart Jacket</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Winter Pink</option><option>Snowy Rose</option></select>
+        <p class="quote">“Wear your heart out ❄️💗”</p>
+        <button onclick="addToWishlist(8)">Wishlist</button>
+        <button onclick="addToCart(8)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="9">
+        <img src="images/bonita_socks.png" alt="Bonita Socks">
+        <h3>Bonita Socks</h3>
+        <p>One Size Only</p>
+        <label>Choose Shade:</label>
+        <select><option>Peach Pop</option><option>Cherry Blush</option></select>
+        <p class="quote">“Cute from head to toe 🧦”</p>
+        <button onclick="addToWishlist(9)">Wishlist</button>
+        <button onclick="addToCart(9)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="10">
+        <img src="images/pookie_jumpsuit.png" alt="Pookie Jumpsuit">
+        <h3>Pookie Jumpsuit</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Pink Cocoa</option><option>Cloud Blush</option></select>
+        <p class="quote">“One-piece wonder 💫”</p>
+        <button onclick="addToWishlist(10)">Wishlist</button>
+        <button onclick="addToCart(10)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="11">
+        <img src="images/cozy_winter_coord_set.png" alt="Coord Set">
+        <h3>Winter Coord Set</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Warm Blush</option><option>Snow Petal</option></select>
+        <p class="quote">“Snuggle season style ❄️✨”</p>
+        <button onclick="addToWishlist(11)">Wishlist</button>
+        <button onclick="addToCart(11)">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="12">
+        <img src="images/bonita_cute_pants.png" alt="Bonita Cute Pants">
+        <h3>Bonita Cute Pants</h3>
+        <p>Sizes: 28 • 30 • 32 • 34 • 36</p>
+        <label>Choose Shade:</label>
+        <select><option>Soft Berry</option><option>Rosy Dust</option></select>
+        <p class="quote">“Sweet but fierce 🍓”</p>
+        <button onclick="addToWishlist(12)">Wishlist</button>
+        <button onclick="addToCart(12)">Add to Cart</button>
+      </div>
+
+      <!-- NEW ITEMS END -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pinklish. Made with 💖 by Akriti Sohane</p>
+  </footer>
+
+  <!-- JS Logic -->
+  <script>
+    const productData = {
+      1: { id: 1, name: "Bunny Snuggle Hoodie", img: "images/bunny_hoodie.png" },
+      2: { id: 2, name: "Peachy Joggers", img: "images/bottom_1.png" },
+      3: { id: 3, name: "Elegant Brunch Dress", img: "images/elegant_brunch_dress.png" },
+      4: { id: 4, name: "Rose Joggers", img: "images/bottom_2.png" },
+      5: { id: 5, name: "Candy Flare Pants", img: "images/bottom_3.png" },
+      6: { id: 6, name: "Bow Hoodie", img: "images/bow_hoodie.png" },
+      7: { id: 7, name: "Kitty Wink Hoodie", img: "images/Kitty_Wink_Hoddie.png" },
+      8: { id: 8, name: "Cozy Heart Jacket", img: "images/cozy_winter_heart_jacket.png" },
+      9: { id: 9, name: "Bonita Socks", img: "images/bonita_socks.png" },
+      10: { id: 10, name: "Pookie Jumpsuit", img: "images/pookie_jumpsuit.png" },
+      11: { id: 11, name: "Winter Coord Set", img: "images/cozy_winter_coord_set.png" },
+      12: { id: 12, name: "Bonita Cute Pants", img: "images/bonita_cute_pants.png" },
+    };
+
+    function addToCart(id) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (!cart.find(p => p.id === id)) cart.push(productData[id]);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(productData[id].name + " added to cart!");
+    }
+
+    function addToWishlist(id) {
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (!wishlist.find(p => p.id === id)) wishlist.push(productData[id]);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      alert(productData[id].name + " added to wishlist!");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Pinklish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">💗 Pinklish</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="section">
+    <h2>Your Cart 🛍️</h2>
+    <div id="cart-container" class="horizontal-scroll"></div>
+    <p id="empty-cart" style="display:none;">Your cart is empty.</p>
+  </section>
+
+  <!-- Suggestions Section -->
+  <section class="section">
+    <h2>You Might Also Like 💡</h2>
+    <div id="suggestions" class="horizontal-scroll"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pinklish. Made with 💖 by Akriti Sohane</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const products = {
+      1: { id: 1, name: "Bunny Hoodie", img: "images/bunny_hoodie.png" },
+      2: { id: 2, name: "Peachy Joggers", img: "images/bottom_1.png" },
+      3: { id: 3, name: "Elegant Brunch Dress", img: "images/elegant_brunch_dress.png" },
+      4: { id: 4, name: "Rose Joggers", img: "images/bottom_2.png" },
+      5: { id: 5, name: "Candy Flare Pants", img: "images/bottom_3.png" },
+      6: { id: 6, name: "Bow Hoodie", img: "images/bow_hoodie.png" },
+      7: { id: 7, name: "Kitty Wink Hoodie", img: "images/Kitty_Wink_Hoddie.png" },
+      8: { id: 8, name: "Cozy Heart Jacket", img: "images/cozy_winter_heart_jacket.png" },
+      9: { id: 9, name: "Bonita Socks", img: "images/bonita_socks.png" },
+      10: { id: 10, name: "Pookie Jumpsuit", img: "images/pookie_jumpsuit.png" },
+      11: { id: 11, name: "Winter Coord Set", img: "images/cozy_winter_coord_set.png" },
+      12: { id: 12, name: "Bonita Cute Pants", img: "images/bonita_cute_pants.png" }
+    };
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-container");
+    const emptyMsg = document.getElementById("empty-cart");
+
+    function renderCart() {
+      if (cart.length === 0) {
+        emptyMsg.style.display = "block";
+        container.innerHTML = "";
+        return;
+      }
+
+      emptyMsg.style.display = "none";
+      container.innerHTML = cart.map(item => `
+        <div class="product-card">
+          <img src="${item.img}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p class="quote">Your pink pick 💗</p>
+          <button onclick="removeFromCart(${item.id})">Remove</button>
+        </div>
+      `).join("");
+    }
+
+    function removeFromCart(id) {
+      const updated = cart.filter(item => item.id !== id);
+      localStorage.setItem("cart", JSON.stringify(updated));
+      location.reload(); // Refresh view
+    }
+
+    function renderSuggestions() {
+      const suggestionBox = document.getElementById("suggestions");
+      const cartIds = cart.map(item => item.id);
+      const notInCart = Object.values(products).filter(p => !cartIds.includes(p.id));
+      const random = notInCart.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+      suggestionBox.innerHTML = random.map(item => `
+        <div class="product-card">
+          <img src="${item.img}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <button onclick="addToCart(${item.id})">Add to Cart</button>
+        </div>
+      `).join("");
+    }
+
+    function addToCart(id) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (!cart.find(p => p.id === id)) cart.push(products[id]);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Added to cart 💖");
+      renderCart();
+      renderSuggestions();
+    }
+
+    renderCart();
+    renderSuggestions();
+  </script>
+
+</body>
+</html>

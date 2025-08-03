@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pinklish by Akriti Sohane</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌸 Navbar -->
+  <header class="navbar">
+    <div class="logo">💗 Pinklish</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <!-- 🌸 Hero Section -->
+  <section class="hero-section">
+    <h1>Welcome to Pinklish</h1>
+    <p>Where every shade of pink has a story 💖</p>
+    <a href="collection.html" class="btn">Explore Collection</a>
+  </section>
+
+  <!-- 🌸 Slideshow -->
+  <section class="section" id="slideshow">
+    <h2>Pink Inspirations 💫</h2>
+    <div class="slideshow-container">
+      <img class="slide" src="images/slide_1.png" alt="Slide 1" style="display:block;">
+      <img class="slide" src="images/slide_2.png" alt="Slide 2">
+      <img class="slide" src="images/slide_3.png" alt="Slide 3">
+      <img class="slide" src="images/slide_4.png" alt="Slide 4">
+      <img class="slide" src="images/slide_5.png" alt="Slide 5">
+    </div>
+  </section>
+
+  <!-- 🌸 Founder Thought -->
+  <section class="section founder-note">
+    <h2>💖 A Thought from Akriti Sohane</h2>
+    <p>
+      Being a girl who loves pink, I’ve always felt a deep connection to the softness, strength, and sparkle that this color brings.
+      Pink isn’t just a color, it’s an emotion. It’s the comfort of feeling pretty, the power of being bold, and the joy of embracing your feminine side without holding back.
+      I created Pinklish for every girlie out there who lights up when she sees blush, rose, peach, or magenta. This is for the ones who dream in pink, dress in pink, and live in pink.
+      This app is dedicated to all my pretty ladies who carry confidence in curls, wear love like lipstick, and let their personality shine in every shade of pink. You inspire me and Pinklish is my way of celebrating you.
+    </p>
+    <p>With all the love,<br><strong>Akriti Sohane</strong></p>
+  </section>
+
+  <!-- 🌸 Footer -->
+  <footer>
+    <p>© 2025 Pinklish. Made with 💖 by Akriti Sohane</p>
+  </footer>
+
+  <!-- 🌸 Slideshow Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((s, i) => {
+        s.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    setInterval(nextSlide, 3000); // every 3 seconds
+  </script>
+
+</body>
+</html>

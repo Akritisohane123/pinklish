@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account - Pinklish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">💗 Pinklish</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <!-- Account Section -->
+  <section class="section">
+    <h2>Your Account 👛</h2>
+    <form onsubmit="event.preventDefault(); saveAccount();">
+      <input type="text" id="name" placeholder="Full Name" required><br>
+      <input type="tel" id="contact" placeholder="Contact Number" required><br>
+      <input type="email" id="email" placeholder="Email Address" required><br>
+      <input type="text" id="address" placeholder="Local Address" required><br>
+      <select id="size" required>
+        <option value="">Preferred Size</option>
+        <option>28</option>
+        <option>30</option>
+        <option>32</option>
+        <option>34</option>
+        <option>36</option>
+      </select><br>
+      <button type="submit" class="btn">Save Details</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pinklish. Made with 💖 by Akriti Sohane</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function saveAccount() {
+      const name = document.getElementById("name").value;
+      alert("Account details saved! Thank you, " + name + " 💕");
+    }
+  </script>
+
+</body>
+</html>
